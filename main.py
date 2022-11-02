@@ -1,11 +1,13 @@
-import pygame
+import pygame 
+import sys 
 from pygame.locals import *
+from mapa import mapa 
+
+mapabusca = mapa
 
 def desenhar():
     
     pygame.init()#inicializa pygame
-
-    clock = pygame.time.Clock()
 
     #Define a dimensão da tela com display.set_mode()
     tela = pygame.display.set_mode((1280, 720)) 
@@ -18,13 +20,18 @@ def desenhar():
 
     while True:
 
-        clock.tick(60)
-
+        #desenha a imagem nas coordenadas iniciais
         tela.blit(BackGround, (0, 0))
 
         x, y = pygame.mouse.get_pos()
 
+        for i in mapa:
+            #pygame.draw.rect desenhe um retângulo
+            pygame.draw.rect(tela, mapa[i][0].cor, [mapa[i][1]*35, mapa[i][2]*35, 35, 35])
+            
+        #pygame.draw.rect(tela, (200, 200, 200), [mapa[76][3] * 35, mapa[76][2] * 35, 35, 25])
 
+        
         for event in pygame.event.get():
 
             if event.type == pygame.QUIT:
