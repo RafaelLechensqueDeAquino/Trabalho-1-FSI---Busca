@@ -10,7 +10,7 @@ def desenhar():
     pygame.init()#inicializa pygame
 
     #Define a dimensão da tela com display.set_mode()
-    tela  = pygame.display.set_mode((500, 300)) #Display
+    tela  = pygame.display.set_mode((500, 500)) #Display
 
     # Carregue a imagem de fundo aqui. Verifique se o arquivo existe!
     BackGround = pygame.image.load("peacefulwallpaper.jpg")
@@ -31,7 +31,7 @@ def desenhar():
             print(str (i) + str(mapabusca[i][0].descricao))
 
             #pygame.draw.rect desenhe um retângulo
-            pygame.draw.rect(tela, mapa[i][0].cor, [mapa[i][1]*35, mapa[i][2]*35, 35, 35])
+            pygame.draw.rect(tela, mapa[i][0].cor, [mapa[i][1]*100, mapa[i][2]*100, 100, 100])
             
         #pygame.draw.rect(tela, (200, 200, 200), [mapa[76][3] * 35, mapa[76][2] * 35, 35, 25])
 

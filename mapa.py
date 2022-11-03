@@ -5,7 +5,7 @@ solidoPlano = Terreno(descricao='Solido e Plano',custo=1, cor=[153, 102, 0])
 rochoso = Terreno(descricao='Rochoso',custo=10, cor=[0, 153, 51])
 arenosos = Terreno(descricao='Arenosos',custo=4, cor=[255, 255, 0])
 pantano = Terreno(descricao='Pântano',custo=20, cor=[0, 153, 51])
-parede = Terreno(descricao='Parede',custo=100, cor=[0, 153, 51])
+parede = Terreno(descricao='Parede',custo=100, cor=[51, 51, 51])
 
 terrenos = [solidoPlano, rochoso, arenosos, pantano, parede]
 
